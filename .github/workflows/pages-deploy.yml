@@ -15,7 +15,7 @@ on:
 permissions:
   contents: read
   pages: write
-  id-token: write
+  id-token : write
 
 # Allow one concurrent deployment
 concurrency:
@@ -53,7 +53,6 @@ jobs:
       - name: Test site
         run: |
           bundle exec htmlproofer _site \
-            \-\-disable-external=true \
             \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
 
       - name: Upload site artifact
