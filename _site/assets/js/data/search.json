@@ -1,9 +1,9 @@
 [
   
   {
-    "title": "hello world!",
+    "title": "Internal DMZ Protection",
     "url": "/posts/welcome/",
-    "categories": "homelab, hardaware",
+    "categories": "SOC, SIEM, NIDS, firewall",
     "tags": "",
     "date": "2024-05-23 12:00:00 -0500",
     
@@ -13,8 +13,8 @@
 
 
     
-    "snippet": "welcomemy name is ahmed bahya and i am going to be the best cybersecurity expert the world has ever seen.console.log('hello world!')",
-    "content": "welcomemy name is ahmed bahya and i am going to be the best cybersecurity expert the world has ever seen.console.log('hello world!')"
+    "snippet": "Internal DMZ Protection with ELK Stack and Suricata IDSHello, everyone!I’m currently working on a new blog post that I’m excited to share with you. It will be published soon, so stay tuned for upda...",
+    "content": "Internal DMZ Protection with ELK Stack and Suricata IDSHello, everyone!I’m currently working on a new blog post that I’m excited to share with you. It will be published soon, so stay tuned for updates!Thank you for your support, and I can’t wait to hear your thoughts once it’s live. 😊"
   }
   
 ]

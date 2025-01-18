@@ -14,7 +14,7 @@ timezone: America/Chicago
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: B2hu # the main title
+title: ThreatLens # the main title
 
 tagline: Cyber Attacks under Lenses # it will display as the subtitle
 
@@ -35,7 +35,7 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Ahmed BAHYA
-  email: example@domain.com # change to your email address
+  email: bahya.ahmed@ine.inpt.ac.ma # change to your email address
   links:
     # The first element serves as the copyright owner's link
     - https://twitter.com/username # change to your Twitter homepage
@@ -98,7 +98,7 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-k524CkEeUSTnbzY7CWYyAD-aahkINPwYtw&s
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.

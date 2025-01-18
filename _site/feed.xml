@@ -2,9 +2,9 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>http://localhost:4000/</id>
-  <title>B2hu</title>
+  <title>ThreatLens</title>
   <subtitle>explore the realm of cyber attacks under Lenses and mitigations.</subtitle>
-  <updated>2025-01-14T23:16:37-06:00</updated>
+  <updated>2025-01-17T19:50:34-06:00</updated>
   <author>
     <name>Ahmed BAHYA</name>
     <uri>http://localhost:4000/</uri>
@@ -20,11 +20,11 @@
 
   
   <entry>
-    <title>hello world!</title>
-    <link href="http://localhost:4000/posts/welcome/" rel="alternate" type="text/html" title="hello world!" />
+    <title>Internal DMZ Protection</title>
+    <link href="http://localhost:4000/posts/welcome/" rel="alternate" type="text/html" title="Internal DMZ Protection" />
     <published>2024-05-23T12:00:00-05:00</published>
   
-    <updated>2024-05-23T12:00:00-05:00</updated>
+    <updated>2025-01-15T21:01:44-06:00</updated>
   
     <id>http://localhost:4000/posts/welcome/</id>
     <content type="text/html" src="http://localhost:4000/posts/welcome/" />
@@ -34,15 +34,23 @@
 
   
     
-    <category term="homelab" />
+    <category term="SOC" />
     
-    <category term="hardaware" />
+    <category term="SIEM" />
+    
+    <category term="NIDS" />
+    
+    <category term="firewall" />
     
   
 
-  <summary>welcome
-my name is ahmed bahya and i am going to be the best cybersecurity expert the world has ever seen.
-console.log(&amp;#39;hello world!&amp;#39;)</summary>
+  <summary>Internal DMZ Protection with ELK Stack and Suricata IDS
+
+Hello, everyone!
+
+I’m currently working on a new blog post that I’m excited to share with you. It will be published soon, so stay tuned for updates!
+
+Thank you for your support, and I can’t wait to hear your thoughts once it’s live. 😊</summary>
 
   </entry>
 
