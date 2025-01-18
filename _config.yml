@@ -42,7 +42,7 @@ social:
     - https://github.com/B2hu # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://www.linkedin.com/in/ahmed-bahya-b9107424b/
 
 # Site Verification Settings
 webmaster_verifications:
@@ -59,7 +59,7 @@ webmaster_verifications:
 # Web Analytics Settings
 analytics:
   google:
-    id: # fill in your Google Analytics ID
+    id: G-MK2D30NHFP
   goatcounter:
     id: # fill in your GoatCounter ID
   umami:

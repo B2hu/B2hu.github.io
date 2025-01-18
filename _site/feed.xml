@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>ThreatLens</title>
   <subtitle>explore the realm of cyber attacks under Lenses and mitigations.</subtitle>
-  <updated>2025-01-17T19:50:34-06:00</updated>
+  <updated>2025-01-17T19:57:35-06:00</updated>
   <author>
     <name>Ahmed BAHYA</name>
     <uri>http://localhost:4000/</uri>
@@ -24,7 +24,7 @@
     <link href="http://localhost:4000/posts/welcome/" rel="alternate" type="text/html" title="Internal DMZ Protection" />
     <published>2024-05-23T12:00:00-05:00</published>
   
-    <updated>2025-01-15T21:01:44-06:00</updated>
+    <updated>2025-01-17T19:51:36-06:00</updated>
   
     <id>http://localhost:4000/posts/welcome/</id>
     <content type="text/html" src="http://localhost:4000/posts/welcome/" />
