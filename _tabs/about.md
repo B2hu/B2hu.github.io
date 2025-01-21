@@ -5,7 +5,7 @@ order: 4
 ---
 ## Hi and welcome to my personal blog.
 
-My name is Ahmed BAHYA, and I am a cybersecurity enthusiast with a keen interest in Blue Teaming.
+My name is Ahmed BAHYA, and I am a cybersecurity enthusiast with a keen interest in Blue Teaming, and Defense Engineering.
 
 This blog is dedicated to sharing insights into various cybersecurity attacks and threats, along with effective mitigation techniques to prevent them.
 

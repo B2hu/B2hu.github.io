@@ -3,8 +3,8 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>http://localhost:4000/</id>
   <title>ThreatLens</title>
-  <subtitle>explore the realm of cyber attacks under Lenses and mitigations.</subtitle>
-  <updated>2025-01-17T21:05:27-06:00</updated>
+  <subtitle>explore the realm of cyber attacks under Lenses and strong Cybersecurity architecture.</subtitle>
+  <updated>2025-01-21T23:13:09+01:00</updated>
   <author>
     <name>Ahmed BAHYA</name>
     <uri>http://localhost:4000/</uri>
@@ -20,37 +20,31 @@
 
   
   <entry>
-    <title>Internal DMZ Protection</title>
-    <link href="http://localhost:4000/posts/welcome/" rel="alternate" type="text/html" title="Internal DMZ Protection" />
-    <published>2024-05-23T12:00:00-05:00</published>
+    <title>KELK Project - Building a Scalable Log Pipeline with Kafka and ELK Stack</title>
+    <link href="http://localhost:4000/posts/KELK-Project/" rel="alternate" type="text/html" title="KELK Project - Building a Scalable Log Pipeline with Kafka and ELK Stack" />
+    <published>2025-01-20T14:00:00+01:00</published>
   
-    <updated>2025-01-17T20:58:04-06:00</updated>
+    <updated>2025-01-20T14:00:00+01:00</updated>
   
-    <id>http://localhost:4000/posts/welcome/</id>
-    <content type="text/html" src="http://localhost:4000/posts/welcome/" />
+    <id>http://localhost:4000/posts/KELK-Project/</id>
+    <content type="text/html" src="http://localhost:4000/posts/KELK-Project/" />
     <author>
       <name>Ahmed BAHYA</name>
     </author>
 
   
     
-    <category term="SOC" />
+    <category term="log pipeline" />
     
-    <category term="SIEM" />
+    <category term="Elk stack" />
     
-    <category term="NIDS" />
-    
-    <category term="firewall" />
+    <category term="Kafka" />
     
   
 
-  <summary>Internal DMZ Protection with ELK Stack and Suricata IDS
+  <summary>Hello, and welcome! With our growing systems and an increasing number of endpoints, managing logs has become a crucial step in both securing our infrastructure and ensuring its reliability. Logs serve as the pulse of our systems, offering valuable insights that empower us to detect anomalies, troubleshoot issues, and maintain operational excellence.
 
-Hello, everyone!
-
-I’m currently working on a new blog post that I’m excited to share with you. It will be published soon, so stay tuned for updates!
-
-Thank you for your support, and I can’t wait to hear your thoughts once it’s live. 😊</summary>
+Creating an appropriate log pipeline is not ...</summary>
 
   </entry>
 
