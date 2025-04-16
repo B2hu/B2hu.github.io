@@ -6,7 +6,6 @@ tags: [ad,asreproast,ad,bloodhound,dcsync]     # TAG names should always be lowe
 comments: true
 image:
   path: /./media/post2/forest.png
-  alt: image alternative text
 ---
 **Hello** This is a very simple walkthrough for the windows machine Forest. In this walkthrough we'll be see some basic AD enumeration and Exploitation, without further ado let's get into it 
 # Enumeration
@@ -66,9 +65,9 @@ it looks like the exchange windows group has **writeDacl** rights on the domain 
 
 For this we’ll create another user called **jason** with a password of **psswd123** and then add him to 2 groups exchange windwos permissions and remote management users.
 ```powershell
-> net user jason psswd123 /add /domain
-> net group "Exchange Windows Permissions" jason /add
-> net localgroup "Remote Management Users" jason /add
+net user jason psswd123 /add /domain
+net group "Exchange Windows Permissions" jason /add
+net localgroup "Remote Management Users" jason /add
 ```
 The commands above create a new user named john and add him to the required groups. Next,
 download the **PowerView** script and import it into the current session.
