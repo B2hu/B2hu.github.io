@@ -2,12 +2,12 @@
 title: Forest @ HackTheBox  
 date: 2025-04-14 13:00:00 
 categories: [HTB Machines,Windows Machines]
-tags: [ad,asreproast,ad,bloodhound,dcsync]     # TAG names should always be lowercase
+tags: [ad,asreproast,ad,bloodhound,dcsync,hack the box]     # TAG names should always be lowercase
 comments: true
 image:
   path: /./media/post2/forest.png
 ---
-**Hello** This is a very simple walkthrough for the windows machine Forest. In this walkthrough we'll be see some basic AD enumeration and Exploitation, without further ado let's get into it 
+**Hello** This is a very simple walkthrough for the windows machine Forest (easy). In this walkthrough we'll be see some basic AD enumeration and Exploitation, without further ado let's get into it 
 ## Enumeration
 ### Nmap
 we'll start with a an advanced tcp port scan of all of the open ports ($ports)
