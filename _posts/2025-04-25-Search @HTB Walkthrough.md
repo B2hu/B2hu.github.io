@@ -1,6 +1,6 @@
 ---
-title: Escape @ HackTheBox  
-date: 2025-04-17 13:00:00 
+title: Search @ HackTheBox  
+date: 2025-04-25 13:00:00 
 categories: [HTB Machines,Windows Machines]
 tags: [active directory,domain controller,responder,ntlm,SPN,DCSync,hack the box,GMSA,adc,kerberoasring]     # TAG names should always be lowercase
 comments: true
