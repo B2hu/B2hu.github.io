@@ -129,7 +129,6 @@ comments:
     reactions_enabled: 1
     theme: preferred_color_scheme
 
-
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
 assets:
   self_host:
@@ -225,3 +224,5 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+plugins:
+  - jekyll-seo-tag
