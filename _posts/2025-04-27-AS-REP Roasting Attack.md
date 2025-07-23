@@ -49,6 +49,7 @@ In this practical demonstration, we'll simulate an **AS-REP Roasting** attack in
 
 - Vulnerable Account: **iccn.ma/jdoe** (pre-authentication disabled)
 the **jdoe** user properties must be set up with preauth disabled just as follows : 
+
 ![screen_2](/./media/post5/jdoe_prop.png)
 
 ### Attack
