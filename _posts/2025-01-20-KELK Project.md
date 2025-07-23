@@ -3,6 +3,8 @@ title: KELK Project - Building a Scalable Log Pipeline with Kafka and ELK Stack
 date: 2025-01-20 13:00:00 
 categories: [log pipeline,Elk stack,Kafka]
 tags: [kafka,siem,elasticsearch,kibana,logstash,filebeat,docker]     # TAG names should always be lowercase
+image:
+  path: /./media/post1/KELK.png
 ---
 **Hello**, and welcome! With our growing systems and an increasing number of endpoints, managing logs has become a crucial step in both securing our infrastructure and ensuring its reliability. Logs serve as the pulse of our systems, offering valuable insights that empower us to detect anomalies, troubleshoot issues, and maintain operational excellence.
 
