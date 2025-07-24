@@ -8,7 +8,7 @@ image:
   path: /./media/post5/kerberos.png
 ---
 Hi,Welcome again to a new Kerberos abuse blog post. In this blog post, I will demonstrate and simulate a very classic yet interessting Active Directory and Kerberos abuse attack: the **DCSync** attack. So, let's get started!
-> In this post i will not explain Kerberos Protocol, refer to the previus post where i have already explained it or click this link <a href=https://b2hu.me/posts/AS-REP-Roasting-Attack>here</a> 
+> In this post i will not explain Kerberos Protocol, refer to the previus post where i have already explained it or click this link <a href="https://b2hu.me/posts/AS-REP-Roasting-Attack">here</a> 
 {: .prompt-info }
 
 ## DCSync :
