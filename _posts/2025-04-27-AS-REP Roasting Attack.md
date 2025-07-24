@@ -77,7 +77,7 @@ as we can see the password of the **iccn/jdoe** user is **Password123**
 and just like that the attacker has now a foothold in your domaina and can perfom even more enumeration to find weakspots.
 
 
-## Detect & respond the Attack Using _Wazuh_
+## Detect & respond to the Attack Using _Wazuh_
 
 every TGT Request to the DC is logged with this **4768**, remember it because we'll need it later when we create detection rules in **_wazuh_**. You can see the event in windows event viewer just like this :
 
