@@ -2,7 +2,7 @@
 title: DCSync Attack - MITRE ATT&CK T1003.006
 date: 2025-07-24 10:32:00 
 categories: [Purple Team,Active Directory & Kerberos Abuse]
-tags: [active directory,asrep roasting,hashcat]     # TAG names should always be lowercase
+tags: [active directory,dcsync]     # TAG names should always be lowercase
 comments: true
 image:
   path: /./media/post5/kerberos.png
