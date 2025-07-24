@@ -8,8 +8,9 @@ image:
   path: /./media/post5/kerberos.png
 ---
 Hi,Welcome again to a new Kerberos abuse blog post. In this blog post, I will demonstrate and simulate a very classic yet interessting Active Directory and Kerberos abuse attack: the **DCSync** attack. So, let's get started!
-> In this post i will not explain Kerberos Protocol, refer to the previus post where i have already explained it or click this link <a href="https://b2hu.me/posts/AS-REP-Roasting-Attack">here</a> 
+> In this post, I won’t explain the Kerberos protocol. You can refer to the previous post where I already covered it, or click this link: <a href="https://b2hu.me/posts/AS-REP-Roasting-Attack">here</a>.  
 {: .prompt-info }
+
 
 ## DCSync :
 **DCSync** is a post-exploitation technique where an attacker impersonates a Domain Controller (DC) and abuses the **Directory Replication Service Remote Protocol (DRSR)** to extract sensitive information, such as **NTLM password hashes, Kerberos tickets, and even KRBTGT account credentials** — the keys to forging Golden Tickets.
@@ -48,7 +49,7 @@ to perform DCSync a lot of red team tools can be used whether its for a windows 
 impacket-secretsdump iccn/jdoe@10.0.2.16
 ```
 you will be prompted to enter the user's password (as said befor DCSync is a post exploitation technique),the output wil be something similair to this
-```t
+```shell
 Impacket v0.12.0 - Copyright Fortra, LLC and its affiliated companies 
 
 Password:
