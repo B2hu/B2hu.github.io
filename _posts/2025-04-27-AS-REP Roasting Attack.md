@@ -1,11 +1,27 @@
 ---
 title: AS-REP Roasting - MITRE ATT&CK T1558.004
 date: 2025-04-27 13:00:00 
+last_modified_at: 2025-04-27 13:00:00
 categories: [Purple Team,Active Directory & Kerberos Abuse]
-tags: [active directory,asrep roasting,hashcat]     # TAG names should always be lowercase
+tags: [active directory,asrep roasting,hashcat,kerberos,mitre att&ck,cybersecurity,penetration testing,purple team]     # TAG names should always be lowercase
 comments: true
 image:
   path: /./media/post5/kerberos.png
+  alt: "AS-REP Roasting Attack - Kerberos Authentication Exploitation"
+author: Ahmed BAHYA
+excerpt: "Learn about AS-REP Roasting attack (MITRE ATT&CK T1558.004), a Kerberos authentication exploitation technique. Complete walkthrough with detection and response using Wazuh SIEM."
+description: "Comprehensive guide to AS-REP Roasting attack (MITRE ATT&CK T1558.004). Learn how attackers exploit Kerberos pre-authentication, practical demonstration, and detection using Wazuh SIEM for cybersecurity defense."
+keywords: [as-rep roasting, kerberos, active directory, mitre att&ck, t1558.004, cybersecurity, penetration testing, purple team, wazuh, siem, detection, response, hashcat, john the ripper]
+canonical_url: https://b2hu.me/posts/AS-REP-Roasting-Attack
+---
+
+## Table of Contents
+- [What is Kerberos?](#what-is-kerberos)
+- [AS-REP Roasting](#as-rep-roasting)
+- [Attack Simulation](#attack-simulation)
+- [Detection & Response](#detection--response)
+- [Conclusion](#conclusion)
+
 ---
 Hello everyone, thank you for being here. In this blog post, I will demonstrate and simulate a very classic yet interessting Active Directory and Kerberos abuse attack: the **AS-REP Roasting** attack. So, let's get started!
 ## What is Kerberos ?
@@ -125,4 +141,38 @@ we can further inspect the content of the alert using drilldowns
 This detection strategy successfully leverages Wazuh’s rule customization and variable substitution capabilities to detect **ASREP Roasting** attacks. By creating a child rule that monitors for TGT requests to accounts with preauthentication disabled—only from unauthorized IPs— we ensure targeted and meaningful alerts without modifying Wazuh’s built-in rules. This approach enhances flexibility and maintains rule integrity. As demonstrated, a simulated ASREP Roasting attempt from an untrusted IP triggered a precise alert, confirming the effectiveness of this method in identifying potential lateral movement or credential dumping attacks in an Active Directory environment.
 
 I hope You have enjoyed reading this blog post,f you have any questions or need help implementing a similar setup, feel free to ask!
+
+---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "AS-REP Roasting - MITRE ATT&CK T1558.004",
+  "description": "Comprehensive guide to AS-REP Roasting attack (MITRE ATT&CK T1558.004). Learn how attackers exploit Kerberos pre-authentication, practical demonstration, and detection using Wazuh SIEM for cybersecurity defense.",
+  "image": "https://b2hu.me/media/post5/kerberos.png",
+  "author": {
+    "@type": "Person",
+    "name": "Ahmed BAHYA",
+    "url": "https://b2hu.me"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ThreatLenz",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://i.pinimg.com/236x/19/27/c0/1927c03f9e435636a71698616c4416fb.jpg"
+    }
+  },
+  "datePublished": "2025-04-27T13:00:00+00:00",
+  "dateModified": "2025-04-27T13:00:00+00:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://b2hu.me/posts/AS-REP-Roasting-Attack"
+  },
+  "keywords": "as-rep roasting, kerberos, active directory, mitre att&ck, t1558.004, cybersecurity, penetration testing, purple team, wazuh, siem, detection, response, hashcat, john the ripper",
+  "articleSection": "Purple Team",
+  "inLanguage": "en-US"
+}
+</script>
 

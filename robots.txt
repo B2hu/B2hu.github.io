@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://b2hu.me/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /_site/
+Disallow: /.git/
+Disallow: /.jekyll-cache/
+Disallow: /_drafts/
+Disallow: /_data/
+Disallow: /_plugins/
+Disallow: /tools/
+Disallow: /docs/ 

@@ -1,11 +1,26 @@
 ---
-title: Search @ HackTheBox  
+title: Search @ HackTheBox - Complete Walkthrough
 date: 2025-04-25 13:00:00 
+last_modified_at: 2025-04-25 13:00:00
 categories: [HTB Machines,Windows Machines]
-tags: [active directory,domain controller,responder,ntlm,SPN,DCSync,hack the box,GMSA,adc,kerberoasring]     # TAG names should always be lowercase
+tags: [active directory,domain controller,responder,ntlm,SPN,DCSync,hack the box,GMSA,adc,kerberoasting,penetration testing,cybersecurity,walkthrough]     # TAG names should always be lowercase
 comments: true
 image:
   path: /./media/post4/Search.png
+  alt: "Search Machine - HackTheBox Windows Active Directory Challenge"
+author: Ahmed BAHYA
+excerpt: "Complete walkthrough of the Search machine on HackTheBox. Learn Active Directory enumeration, Kerberoasting, password reuse, and privilege escalation techniques in this Windows domain controller challenge."
+description: "Step-by-step walkthrough of the Search machine on HackTheBox. Master Active Directory enumeration, Kerberoasting attacks, password reuse exploitation, and privilege escalation techniques in this comprehensive cybersecurity challenge guide."
+keywords: [hackthebox, search machine, active directory, domain controller, kerberoasting, password reuse, penetration testing, cybersecurity, walkthrough, windows, enumeration, privilege escalation, gmsa, spn]
+canonical_url: https://b2hu.me/posts/Search-HTB-Walkthrough
+---
+
+## Table of Contents
+- [Enumeration](#enumeration)
+- [Gaining a Foothold](#gaining-a-foothold)
+- [Privilege Escalation](#privilege-escalation)
+- [Conclusion](#conclusion)
+
 ---
 Hello, this my walkthroght version about the Search Box in @HTB
 ## Enumeration

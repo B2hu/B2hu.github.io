@@ -1,11 +1,26 @@
 ---
 title: DCSync Attack - MITRE ATT&CK T1003.006
 date: 2025-07-24 10:32:00 
+last_modified_at: 2025-07-24 10:32:00
 categories: [Purple Team,Active Directory & Kerberos Abuse]
-tags: [active directory,dcsync]     # TAG names should always be lowercase
+tags: [active directory,dcsync,mitre att&ck,cybersecurity,penetration testing,purple team,domain controller,ntlm hashes]     # TAG names should always be lowercase
 comments: true
 image:
   path: /./media/post5/kerberos.png
+  alt: "DCSync Attack - Active Directory Replication Exploitation"
+author: Ahmed BAHYA
+excerpt: "Learn about DCSync attack (MITRE ATT&CK T1003.006), a post-exploitation technique to extract NTLM hashes and Kerberos tickets from Active Directory. Complete demonstration with Wazuh detection."
+description: "Comprehensive guide to DCSync attack (MITRE ATT&CK T1003.006). Learn how attackers abuse Directory Replication Service to extract NTLM hashes, Kerberos tickets, and KRBTGT credentials from Active Directory with detection using Wazuh SIEM."
+keywords: [dcsync, active directory, mitre att&ck, t1003.006, cybersecurity, penetration testing, purple team, domain controller, ntlm hashes, kerberos tickets, krbtgt, wazuh, siem, detection, drsr protocol]
+canonical_url: https://b2hu.me/posts/DCSync-Attack
+---
+
+## Table of Contents
+- [DCSync Overview](#dcsync-overview)
+- [Attack Simulation](#attack-simulation)
+- [Detection & Response](#detection--response)
+- [Conclusion](#conclusion)
+
 ---
 Hi,Welcome again to a new Kerberos abuse blog post. In this blog post, I will demonstrate and simulate a very classic yet interessting Active Directory and Kerberos abuse attack: the **DCSync** attack. So, let's get started!
 > In this post, I won’t explain the Kerberos protocol. You can refer to the previous post where I already covered it, or click this link: <a href="https://b2hu.me/posts/AS-REP-Roasting-Attack" target="_blank">here</a>.  

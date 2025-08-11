@@ -1,10 +1,29 @@
 ---
 title: KELK Project - Building a Scalable Log Pipeline with Kafka and ELK Stack
 date: 2025-01-20 13:00:00 
+last_modified_at: 2025-01-20 13:00:00
 categories: [log pipeline,Elk stack,Kafka]
-tags: [kafka,siem,elasticsearch,kibana,logstash,filebeat,docker]     # TAG names should always be lowercase
+tags: [kafka,siem,elasticsearch,kibana,logstash,filebeat,docker,log management,cybersecurity,observability]     # TAG names should always be lowercase
+comments: true
 image:
   path: /./media/post1/KELK.png
+  alt: "KELK Architecture - Kafka ELK Stack Log Pipeline"
+author: Ahmed BAHYA
+excerpt: "Learn how to build a scalable log pipeline using Kafka and ELK Stack for cybersecurity monitoring and threat detection. Complete guide with Docker setup and configuration."
+description: "Comprehensive guide to building a KELK (Kafka + ELK) log pipeline for cybersecurity monitoring. Learn Docker setup, Filebeat configuration, and real-time log processing for threat detection."
+keywords: [kafka, elk stack, log pipeline, cybersecurity, docker, filebeat, elasticsearch, kibana, logstash, siem, threat detection, log management, observability]
+canonical_url: https://b2hu.me/posts/KELK-Project
+---
+
+## Table of Contents
+- [Introduction](#introduction)
+- [Kafka and Zookeeper Services](#kafka-and-zookeeper-services)
+- [Filebeat Service](#filebeat-service)
+- [Elasticsearch Setup](#elasticsearch-setup)
+- [Logstash Configuration](#logstash-configuration)
+- [Kibana Dashboard](#kibana-dashboard)
+- [Conclusion](#conclusion)
+
 ---
 **Hello**, and welcome! With our growing systems and an increasing number of endpoints, managing logs has become a crucial step in both securing our infrastructure and ensuring its reliability. Logs serve as the pulse of our systems, offering valuable insights that empower us to detect anomalies, troubleshoot issues, and maintain operational excellence.
 
@@ -271,3 +290,37 @@ after that return to Kibana > discover
 Et voilà! The logs are transported by Filebeat to the Kafka streaming platform. Logstash then collects them, processes them, and ships them to Elasticsearch, where they are finally displayed on the Kibana dashboard.<br>
 
 **Thank you for reading! If you have any questions regarding this topic, feel free to email me.**
+
+---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "KELK Project - Building a Scalable Log Pipeline with Kafka and ELK Stack",
+  "description": "Comprehensive guide to building a KELK (Kafka + ELK) log pipeline for cybersecurity monitoring. Learn Docker setup, Filebeat configuration, and real-time log processing for threat detection.",
+  "image": "https://b2hu.me/media/post1/KELK.png",
+  "author": {
+    "@type": "Person",
+    "name": "Ahmed BAHYA",
+    "url": "https://b2hu.me"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ThreatLenz",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://i.pinimg.com/236x/19/27/c0/1927c03f9e435636a71698616c4416fb.jpg"
+    }
+  },
+  "datePublished": "2025-01-20T13:00:00+00:00",
+  "dateModified": "2025-01-20T13:00:00+00:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://b2hu.me/posts/KELK-Project"
+  },
+  "keywords": "kafka, elk stack, log pipeline, cybersecurity, docker, filebeat, elasticsearch, kibana, logstash, siem, threat detection, log management, observability",
+  "articleSection": "log pipeline",
+  "inLanguage": "en-US"
+}
+</script>

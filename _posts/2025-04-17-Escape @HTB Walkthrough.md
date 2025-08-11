@@ -1,11 +1,26 @@
 ---
-title: Escape @ HackTheBox  
-date: 2025-04-17 13:00:00 
+title: Escape @ HackTheBox - Complete Walkthrough
+date: 2025-04-25 13:00:00 
+last_modified_at: 2025-04-25 13:00:00
 categories: [HTB Machines,Windows Machines]
-tags: [active directory,domain controller,esc1,responder,ntlm,mssql,silver ticket,hack the box]     # TAG names should always be lowercase
+tags: [hackthebox,escape machine,penetration testing,cybersecurity,walkthrough,windows,active directory]     # TAG names should always be lowercase
 comments: true
 image:
-  path: /./media/post3/Escape.jpg
+  path: /./media/post3/Escape.png
+  alt: "Escape Machine - HackTheBox Windows Challenge"
+author: Ahmed BAHYA
+excerpt: "Complete walkthrough of the Escape machine on HackTheBox. Learn Windows penetration testing techniques, privilege escalation, and Active Directory exploitation in this cybersecurity challenge."
+description: "Step-by-step walkthrough of the Escape machine on HackTheBox. Master Windows penetration testing, privilege escalation techniques, and Active Directory exploitation in this comprehensive cybersecurity challenge guide."
+keywords: [hackthebox, escape machine, windows, penetration testing, cybersecurity, walkthrough, privilege escalation, active directory, exploitation]
+canonical_url: https://b2hu.me/posts/Escape-HTB-Walkthrough
+---
+
+## Table of Contents
+- [Enumeration](#enumeration)
+- [Initial Access](#initial-access)
+- [Privilege Escalation](#privilege-escalation)
+- [Conclusion](#conclusion)
+
 ---
 **Hello** This is a very simple walkthrough for the windows machine Escape (medium). In this walkthrough we'll practice AD enumeration and Exploitation, without further ado let's get into it.
 ## Enumeration
