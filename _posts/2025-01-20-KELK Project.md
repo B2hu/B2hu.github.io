@@ -3,7 +3,7 @@ title: KELK Project - Building a Scalable Log Pipeline with Kafka and ELK Stack
 date: 2025-01-20 13:00:00 
 last_modified_at: 2025-01-20 13:00:00
 categories: [log pipeline,Elk stack,Kafka]
-tags: [kafka,siem,elasticsearch,kibana,logstash,filebeat,docker,log management,cybersecurity,observability]     # TAG names should always be lowercase
+tags: [kafka,siem,elasticsearch,kibana,logstash,filebeat,docker,log management,cybersecurity,observability]     # TAG names should always be lowercase 
 comments: true
 image:
   path: /./media/post1/KELK.png
@@ -13,17 +13,6 @@ excerpt: "Learn how to build a scalable log pipeline using Kafka and ELK Stack f
 description: "Comprehensive guide to building a KELK (Kafka + ELK) log pipeline for cybersecurity monitoring. Learn Docker setup, Filebeat configuration, and real-time log processing for threat detection."
 keywords: [kafka, elk stack, log pipeline, cybersecurity, docker, filebeat, elasticsearch, kibana, logstash, siem, threat detection, log management, observability]
 canonical_url: https://b2hu.me/posts/KELK-Project
----
-
-## Table of Contents
-- [Introduction](#introduction)
-- [Kafka and Zookeper Services](#kafka-and-zookeper-services)
-- [Filebeat Service](#filebeat-service)
-- [Logstash Service](#logstash-service)
-- [Elasticsearch Service](#elasticsearch-service)
-- [Kibana Service](#kibana-service)
-- [Implementation](#implemetation)
-
 ---
 **Hello**, and welcome! With our growing systems and an increasing number of endpoints, managing logs has become a crucial step in both securing our infrastructure and ensuring its reliability. Logs serve as the pulse of our systems, offering valuable insights that empower us to detect anomalies, troubleshoot issues, and maintain operational excellence.
 

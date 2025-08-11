@@ -14,13 +14,6 @@ description: "Step-by-step walkthrough of the Escape machine on HackTheBox. Mast
 keywords: [hackthebox, escape machine, windows, penetration testing, cybersecurity, walkthrough, privilege escalation, active directory, exploitation]
 canonical_url: https://b2hu.me/posts/Escape-HTB-Walkthrough
 ---
-
-## Table of Contents
-- [Enumeration](#enumeration)
-- [Foothold](#foothold)
-- [Lateral Movement](#lateral-movement)
-
----
 **Hello** This is a very simple walkthrough for the windows machine Escape (medium). In this walkthrough we'll practice AD enumeration and Exploitation, without further ado let's get into it.
 ## Enumeration
 we'll start with a an advanced tcp port scan of all of the open ports ($ports)

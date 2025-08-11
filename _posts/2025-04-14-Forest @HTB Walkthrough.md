@@ -1,7 +1,7 @@
 ---
 title: Forest @ HackTheBox - Complete Walkthrough
-date: 2025-04-14 13:00:00 
-last_modified_at: 2025-04-14 13:00:00
+date: 2025-04-25 13:00:00 
+last_modified_at: 2025-04-25 13:00:00
 categories: [HTB Machines,Windows Machines]
 tags: [hackthebox,forest machine,penetration testing,cybersecurity,walkthrough,windows,active directory]     # TAG names should always be lowercase
 comments: true
@@ -13,14 +13,6 @@ excerpt: "Complete walkthrough of the Forest machine on HackTheBox. Learn Window
 description: "Step-by-step walkthrough of the Forest machine on HackTheBox. Master Windows penetration testing, Active Directory enumeration, and privilege escalation techniques in this comprehensive cybersecurity challenge guide."
 keywords: [hackthebox, forest machine, windows, penetration testing, cybersecurity, walkthrough, privilege escalation, active directory, enumeration]
 canonical_url: https://b2hu.me/posts/Forest-HTB-Walkthrough
----
-
-## Table of Contents
-- [Enumeration](#enumeration)
-- [AS_REProast → Foothold](#as_reproast--foothold)
-- [PrivEsc](#privesc)
-- [Conclusion](#conclusion)
-
 ---
 **Hello** This is a very simple walkthrough for the windows machine Forest (easy). In this walkthrough we'll be see some basic AD enumeration and Exploitation, without further ado let's get into it 
 ## Enumeration

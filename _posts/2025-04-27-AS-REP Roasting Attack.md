@@ -14,15 +14,6 @@ description: "Comprehensive guide to AS-REP Roasting attack (MITRE ATT&CK T1558.
 keywords: [as-rep roasting, kerberos, active directory, mitre att&ck, t1558.004, cybersecurity, penetration testing, purple team, wazuh, siem, detection, response, hashcat, john the ripper]
 canonical_url: https://b2hu.me/posts/AS-REP-Roasting-Attack
 ---
-
-## Table of Contents
-- [What is Kerberos?](#what-is-kerberos)
-- [AS_REP Roasting](#as_rep-roasting)
-- [ATTACK Simulation](#attack-simulation-as-rep-roasting-attack-demonstration)
-- [Detect & respond to the Attack Using _Wazuh_](#detect--respond-to-the-attack-using-_wazuh_)
-- [Conclusion](#conclusion)
-
----
 Hello everyone, thank you for being here. In this blog post, I will demonstrate and simulate a very classic yet interessting Active Directory and Kerberos abuse attack: the **AS-REP Roasting** attack. So, let's get started!
 ## What is Kerberos ?
 Kerberos is a network authentication protocol designed to provide strong authentication for client-server applications using ticket-based cryptography. Developed by MIT, it is the default authentication mechanism in Microsoft Active Directory (AD) environments.
