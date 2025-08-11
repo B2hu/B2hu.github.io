@@ -17,9 +17,9 @@ canonical_url: https://b2hu.me/posts/AS-REP-Roasting-Attack
 
 ## Table of Contents
 - [What is Kerberos?](#what-is-kerberos)
-- [AS-REP Roasting](#as-rep-roasting)
-- [Attack Simulation](#attack-simulation)
-- [Detection & Response](#detection--response)
+- [AS_REP Roasting](#as_rep-roasting)
+- [ATTACK Simulation](#attack-simulation-as-rep-roasting-attack-demonstration)
+- [Detect & respond to the Attack Using _Wazuh_](#detect--respond-to-the-attack-using-_wazuh_)
 - [Conclusion](#conclusion)
 
 ---

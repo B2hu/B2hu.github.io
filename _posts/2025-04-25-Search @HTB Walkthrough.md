@@ -17,9 +17,8 @@ canonical_url: https://b2hu.me/posts/Search-HTB-Walkthrough
 
 ## Table of Contents
 - [Enumeration](#enumeration)
-- [Gaining a Foothold](#gaining-a-foothold)
-- [Privilege Escalation](#privilege-escalation)
-- [Conclusion](#conclusion)
+- [Gaining a foothold](#gaining-a-foothold)
+- [PrivEsc](#privesc)
 
 ---
 Hello, this my walkthroght version about the Search Box in @HTB

@@ -6,7 +6,7 @@ categories: [HTB Machines,Windows Machines]
 tags: [hackthebox,forest machine,penetration testing,cybersecurity,walkthrough,windows,active directory]     # TAG names should always be lowercase
 comments: true
 image:
-  path: /./media/post2/Forest.png
+  path: /./media/post2/forest.png
   alt: "Forest Machine - HackTheBox Windows Challenge"
 author: Ahmed BAHYA
 excerpt: "Complete walkthrough of the Forest machine on HackTheBox. Learn Windows penetration testing techniques, Active Directory enumeration, and privilege escalation in this cybersecurity challenge."
@@ -17,8 +17,8 @@ canonical_url: https://b2hu.me/posts/Forest-HTB-Walkthrough
 
 ## Table of Contents
 - [Enumeration](#enumeration)
-- [Initial Access](#initial-access)
-- [Privilege Escalation](#privilege-escalation)
+- [AS_REProast → Foothold](#as_reproast--foothold)
+- [PrivEsc](#privesc)
 - [Conclusion](#conclusion)
 
 ---

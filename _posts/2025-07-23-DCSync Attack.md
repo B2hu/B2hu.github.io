@@ -16,9 +16,9 @@ canonical_url: https://b2hu.me/posts/DCSync-Attack
 ---
 
 ## Table of Contents
-- [DCSync Overview](#dcsync-overview)
-- [Attack Simulation](#attack-simulation)
-- [Detection & Response](#detection--response)
+- [DCSync](#dcsync)
+- [ATTACK Simulation](#attack-simulation-dcsync-attack-demonstration)
+- [Detect & respond to the Attack Using _Wazuh_](#detect--respond-to-the-attack-using-_wazuh_)
 - [Conclusion](#conclusion)
 
 ---

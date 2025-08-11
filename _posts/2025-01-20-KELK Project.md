@@ -17,12 +17,12 @@ canonical_url: https://b2hu.me/posts/KELK-Project
 
 ## Table of Contents
 - [Introduction](#introduction)
-- [Kafka and Zookeeper Services](#kafka-and-zookeeper-services)
+- [Kafka and Zookeper Services](#kafka-and-zookeper-services)
 - [Filebeat Service](#filebeat-service)
-- [Elasticsearch Setup](#elasticsearch-setup)
-- [Logstash Configuration](#logstash-configuration)
-- [Kibana Dashboard](#kibana-dashboard)
-- [Conclusion](#conclusion)
+- [Logstash Service](#logstash-service)
+- [Elasticsearch Service](#elasticsearch-service)
+- [Kibana Service](#kibana-service)
+- [Implementation](#implemetation)
 
 ---
 **Hello**, and welcome! With our growing systems and an increasing number of endpoints, managing logs has become a crucial step in both securing our infrastructure and ensuring its reliability. Logs serve as the pulse of our systems, offering valuable insights that empower us to detect anomalies, troubleshoot issues, and maintain operational excellence.
