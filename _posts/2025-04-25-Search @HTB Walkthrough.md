@@ -14,13 +14,6 @@ description: "Step-by-step walkthrough of the Search machine on HackTheBox. Mast
 keywords: [hackthebox, search machine, active directory, domain controller, kerberoasting, password reuse, penetration testing, cybersecurity, walkthrough, windows, enumeration, privilege escalation, gmsa, spn]
 canonical_url: https://b2hu.me/posts/Search-HTB-Walkthrough
 ---
-
-## Table of Contents
-- [Enumeration](#enumeration)
-- [Gaining a foothold](#gaining-a-foothold)
-- [PrivEsc](#privesc)
-
----
 Hello, this my walkthroght version about the Search Box in @HTB
 ## Enumeration
 ### nmap
