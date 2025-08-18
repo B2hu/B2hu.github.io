@@ -6,7 +6,7 @@ categories: [Purple Team,Active Directory & Kerberos Abuse]
 tags: [active directory,dcsync,mitre att&ck,cybersecurity,penetration testing,purple team,domain controller,ntlm hashes]     # TAG names should always be lowercase
 comments: true
 image:
-  path: /./media/post6/redteam.png
+  path: /./media/post6/redteam.jpg
   alt: "DCSync Attack - Active Directory Replication Exploitation"
 author: Ahmed BAHYA
 excerpt: "Learn about DCSync attack (MITRE ATT&CK T1003.006), a post-exploitation technique to extract NTLM hashes and Kerberos tickets from Active Directory. Complete demonstration with Wazuh detection."

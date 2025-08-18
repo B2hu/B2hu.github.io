@@ -6,7 +6,7 @@ categories: [log pipeline,Elk stack,Kafka]
 tags: [kafka,siem,elasticsearch,kibana,logstash,filebeat,docker,log management,cybersecurity,observability]     # TAG names should always be lowercase 
 comments: true
 image:
-  path: /./media/post1/KELK.png
+  path: /./media/post1/KELK.jpg
   alt: "KELK Architecture - Kafka ELK Stack Log Pipeline"
 author: Ahmed BAHYA
 excerpt: "Learn how to build a scalable log pipeline using Kafka and ELK Stack for cybersecurity monitoring and threat detection. Complete guide with Docker setup and configuration."
