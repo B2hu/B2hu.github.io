@@ -133,37 +133,4 @@ This detection strategy successfully leverages Wazuh’s rule customization and 
 
 I hope You have enjoyed reading this blog post,f you have any questions or need help implementing a similar setup, feel free to ask!
 
----
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "TechArticle",
-  "headline": "AS-REP Roasting - MITRE ATT&CK T1558.004",
-  "description": "Comprehensive guide to AS-REP Roasting attack (MITRE ATT&CK T1558.004). Learn how attackers exploit Kerberos pre-authentication, practical demonstration, and detection using Wazuh SIEM for cybersecurity defense.",
-  "image": "https://b2hu.me/media/post5/kerberos.png",
-  "author": {
-    "@type": "Person",
-    "name": "Ahmed BAHYA",
-    "url": "https://b2hu.me"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "ThreatLenz",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://i.pinimg.com/236x/19/27/c0/1927c03f9e435636a71698616c4416fb.jpg"
-    }
-  },
-  "datePublished": "2025-04-27T13:00:00+00:00",
-  "dateModified": "2025-04-27T13:00:00+00:00",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://b2hu.me/posts/AS-REP-Roasting-Attack"
-  },
-  "keywords": "as-rep roasting, kerberos, active directory, mitre att&ck, t1558.004, cybersecurity, penetration testing, purple team, wazuh, siem, detection, response, hashcat, john the ripper",
-  "articleSection": "Purple Team",
-  "inLanguage": "en-US"
-}
-</script>
 

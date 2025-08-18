@@ -10,11 +10,11 @@ image:
   alt: "DCSync Attack - Active Directory Replication Exploitation"
 author: Ahmed BAHYA
 excerpt: "Learn about DCSync attack (MITRE ATT&CK T1003.006), a post-exploitation technique to extract NTLM hashes and Kerberos tickets from Active Directory. Complete demonstration with Wazuh detection."
-description: "Comprehensive guide to DCSync attack (MITRE ATT&CK T1003.006). Learn how attackers abuse Directory Replication Service to extract NTLM hashes, Kerberos tickets, and KRBTGT credentials from Active Directory with detection using Wazuh SIEM."
+description: "Comprehensive guide to DCSync attack (MITRE ATT&CK T1003.006). Learn how attackers abuse Directory Replication Service to extract NTLM hashes, Kerberos tickets, and KRBTGT credentials from Active Directory with detection using Wazuh EDR."
 keywords: [dcsync, active directory, mitre att&ck, t1003.006, cybersecurity, penetration testing, purple team, domain controller, ntlm hashes, kerberos tickets, krbtgt, wazuh, siem, detection, drsr protocol]
 canonical_url: https://b2hu.me/posts/DCSync-Attack
 ---
-Hi,Welcome again to a new Kerberos abuse blog post. In this blog post, I will demonstrate and simulate a very classic yet interessting Active Directory abuse attack: the **DCSync** attack. So, let's get started!
+Hi,Welcome again to a new AD attack blog post. In this blog post, I will demonstrate and simulate a very classic yet interessting attack: the **DCSync** attack. So, let's get started!
 
 ## DCSync :
 **DCSync** is a post-exploitation technique where an attacker impersonates a Domain Controller (DC) and abuses the **Directory Replication Service Remote Protocol (DRSR)** to extract sensitive information, such as **NTLM password hashes, Kerberos tickets, and even KRBTGT account credentials** — the keys to forging Golden Tickets.
