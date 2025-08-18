@@ -28,7 +28,7 @@ Kafka is a distributed event-streaming platform designed to handle high-throughp
 
 ### Objectif
 by the end of this tutorial we'll be able to create a log pipeline just as follows :
-![kelk_archi](/./media/post1/KELK.png)
+![kelk_archi](/./media/post1/KELK.jpg)
 ## Kafka and Zookeper Services
 Kafka relies on Zookeeper to coordinate the components of its distributed system. Although newer versions of Kafka are transitioning away from this dependency, Zookeeper remains essential in many deployments for its reliability and simplicity in managing distributed systems. <br>
 ### Setting Up Kafka and Zookeeper 
@@ -279,37 +279,3 @@ after that return to Kibana > discover
 Et voilà! The logs are transported by Filebeat to the Kafka streaming platform. Logstash then collects them, processes them, and ships them to Elasticsearch, where they are finally displayed on the Kibana dashboard.<br>
 
 **Thank you for reading! If you have any questions regarding this topic, feel free to email me.**
-
----
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "TechArticle",
-  "headline": "KELK Project - Building a Scalable Log Pipeline with Kafka and ELK Stack",
-  "description": "Comprehensive guide to building a KELK (Kafka + ELK) log pipeline for cybersecurity monitoring. Learn Docker setup, Filebeat configuration, and real-time log processing for threat detection.",
-  "image": "https://b2hu.me/media/post1/KELK.png",
-  "author": {
-    "@type": "Person",
-    "name": "Ahmed BAHYA",
-    "url": "https://b2hu.me"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "ThreatLenz",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://i.pinimg.com/236x/19/27/c0/1927c03f9e435636a71698616c4416fb.jpg"
-    }
-  },
-  "datePublished": "2025-01-20T13:00:00+00:00",
-  "dateModified": "2025-01-20T13:00:00+00:00",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://b2hu.me/posts/KELK-Project"
-  },
-  "keywords": "kafka, elk stack, log pipeline, cybersecurity, docker, filebeat, elasticsearch, kibana, logstash, siem, threat detection, log management, observability",
-  "articleSection": "log pipeline",
-  "inLanguage": "en-US"
-}
-</script>
