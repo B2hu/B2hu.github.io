@@ -125,7 +125,9 @@ fleet prepare db \
 mv fleet.cert /etc/ssl
 mv fleet.pem /etc/ssl
 ```
+
 ***/etc/systemd/system/fleet.service:***
+
 ```shell
 [Unit]
 Description=Fleet
@@ -148,6 +150,7 @@ ExecStart=/usr/bin/fleet serve \
 [Install]
 WantedBy=multi-user.target
 ```
+
 start the service :
 
 ```shell
