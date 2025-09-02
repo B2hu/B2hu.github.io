@@ -6,7 +6,7 @@ categories: [Fleet DM, osquery, Cybersecurity Engineering]
 tags: [fleet dm,osquery,docker,docker compose]     # TAG names should always be lowercase
 comments: true
 image:
-  path: /./media/post9/entraid.png
+  path: /./media/post8/fleet.png
   alt: "FleetDM and osquery deployment"
 author: Ahmed BAHYA
 excerpt: "Learn how to deploy FleetDM with osquery for endpoint visibility and monitoring. Complete walkthrough with Docker setup, configuration, and integration into your cybersecurity stack."

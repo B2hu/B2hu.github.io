@@ -41,7 +41,7 @@ This is where Entra ID SSO comes in. Instead of recreating accounts, your teams 
 
 N.B : if your server url is not a domain name (like my case make sure you add it in hosts file)
 
-![prof](/./media/post9/entr_app.png)
+![prof](../media/post9/entr_app.png)
 
 ---
 ### Fleet Server Configuration
@@ -52,7 +52,7 @@ N.B : if your server url is not a domain name (like my case make sure you add it
 
 overall the config will look like this : 
 
-![config](/./media/post9/fleet.png)
+![config](../media/post9/fleet.png)
 
 ## JIT Provisioning and tenant user assignement 
 
@@ -68,16 +68,16 @@ This step ensures that when the assigned Entra ID users attempt to log in, Fleet
 
 then in the Fleet server go to **Manage Users > Add User** :
 
-![add_user](/./media/post9/add_user.png)
+![add_user](../media/post9/add_user.png)
 
 ## SSO Test
 the Sign-in options : 
 
-![ss](/./media/post9/sso.png)
+![ss](../media/post9/sso.png)
 
 after choosing to sign-in with Entra you'll be redirected to a MS login portal, and upon a successful login we'll be redirected again to the fleet dashboard : 
 
-![succ_ss](/./media/post9/succ_ss.png)
+![succ_ss](../media/post9/succ_ss.png)
 
 ---
 
