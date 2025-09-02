@@ -190,3 +190,7 @@ SELECT * FROM etc_hosts;
 Running this as a live query in FleetDM will return all host file entries from your endpoints.
 
 ![alt text](../media/post8/query_res.png)
+
+---
+
+Thank you for Reading! feel free to contact me if you have a question.
