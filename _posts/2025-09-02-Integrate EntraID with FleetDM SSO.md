@@ -6,7 +6,7 @@ categories: [Fleet DM, osquery, Cybersecurity Engineering, EntraID, AAD, Azure, 
 tags: [fleet dm,osquery,entra id,iam,aad] # TAG names should always be lowercase
 comments: true
 image:
-  path: ../media/post9/
+  path: /./media/post9/entraid.png
   alt: "FleetDM and osquery deployment"
 author: Ahmed BAHYA
 excerpt: "Learn how to integrate your FleetDM server with already existing Entra ID tenant for seamless SSO login of you security and incident response team"
