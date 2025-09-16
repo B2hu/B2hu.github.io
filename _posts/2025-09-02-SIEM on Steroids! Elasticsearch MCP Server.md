@@ -6,6 +6,7 @@ categories: [MCP, ELK, Elasticsearch, SIEM, SOC, LLM]
 tags: [mcp,siem,soc,llm,elk] # TAG names should always be lowercase
 comments: true
 image:
+  path: /media/post10/mcp_logo.png
   alt: "Elasticsearch MCP integration for SOC"
 author: Ahmed BAHYA
 excerpt: "Discover how Elasticsearch MCP Server supercharges your SOC by bridging LLM automation with real-time SIEM data for smarter investigations and response."
