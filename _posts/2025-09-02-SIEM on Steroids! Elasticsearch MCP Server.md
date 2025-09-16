@@ -11,16 +11,15 @@ author: Ahmed BAHYA
 excerpt: "Discover how Elasticsearch MCP Server supercharges your SOC by bridging LLM automation with real-time SIEM data for smarter investigations and response."
 description: "A practical guide to using Elasticsearch MCP Server to enhance SOC workflows. Learn how to query alerts, automate detection engineering tasks, and leverage LLMs for investigation at scale."
 keywords: [elasticsearch, mcp, siem, soc, automation, purple team, llm, wazuh, elk]
-canonical_url: https://b2hu.me/posts/elasticsearch-mcp-server
 ---
 
-A medium to large organization typically receives thousands of alerts and hundreds of thousands of raw events every single day. Now, imagine being a SOC analyst who has to dig through all this noise, hunting for the few real incidents that matter.
+Hi! A medium to large organization typically receives thousands of alerts and hundreds of thousands of raw events every single day. Now, imagine being a SOC analyst who has to dig through all this noise, hunting for the few real incidents that matter.
 
 Of course, using a SIEM helps — it correlates, filters, and prioritizes events. But even then, the workload is enormous (and honestly, not very healthy in the long run). Analysts still need to pivot, query, and interpret data manually.
 
 Wouldn’t it be perfect if you could just ask ChatGPT to do the heavy lifting for you?
 
-Well… in the MCP world, you can. 🚀
+Well… Thats Why MCP Exists! 
 
 ## So what’s MCP anyway and why use it? 
 
@@ -140,10 +139,32 @@ compromised user account user to brute force :
 
 ![inv_2](/media/post10/inv_2.png)
 
-now lets see if the attacker had any successful login :
+Next step — pivot to check if any of those failed attempts were followed by a successful login for the same user (fast indicator of compromise):
 
 ![inv_3](/media/post10/inv_3.png)
 
-more even we can see all the related activity made by this user in the last 24 hour tha could be suspicious
+Now we broaden the investigation to look for suspicious activity around that user in the past day:
+
+- Process executions (PowerShell, cmd, rundll32)
+
+- New services or scheduled tasks (persistence)
+
+- Lateral logons to other hosts
+
+- Privilege changes (group additions, Admin privileges)
 
 ![inv_4](/media/post10/inv_4.jpeg)
+
+## Conclusion
+
+Using MCP to investigate alerts transforms a tedious manual task into a fast, repeatable, and auditable workflow. With a few natural-language prompts your LLM can:
+
+Translate intent into safe Elasticsearch queries,
+
+Aggregate and summarize noisy events,
+
+Enrich indicators with GeoIP and TI, and
+
+Recommend or trigger containment steps (semi-automated).
+
+The result: faster triage, better context, and less analyst fatigue — all while keeping you in control of the response. Drop this workflow into your SOC demo and you’ll show both technical depth and operational maturity.
