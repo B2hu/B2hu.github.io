@@ -1,5 +1,5 @@
 ---
-title: Kerberoast Attack - MITRE ATT&CK T1558.003
+title: Kerberoast Attack Detection with Wazuh - MITRE ATT&CK T1558.003
 date: 2025-08-12 10:32:00 
 last_modified_at: 2025-08-12 10:32:00
 categories: [Purple Team,Active Directory & Kerberos Abuse]

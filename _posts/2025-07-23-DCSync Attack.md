@@ -1,5 +1,5 @@
 ---
-title: DCSync Attack - MITRE ATT&CK T1003.006
+title: DCSync Attack Detection with Wazuh - MITRE ATT&CK T1003.006
 date: 2025-07-24 10:32:00 
 last_modified_at: 2025-07-24 10:32:00
 categories: [Purple Team,Active Directory & Kerberos Abuse]

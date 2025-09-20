@@ -1,5 +1,5 @@
 ---
-title: AS-REP Roasting - MITRE ATT&CK T1558.004
+title: AS-REP Roasting Detection with Wazuh - MITRE ATT&CK T1558.004
 date: 2025-04-27 13:00:00 
 last_modified_at: 2025-04-27 13:00:00
 categories: [Purple Team,Active Directory & Kerberos Abuse]
