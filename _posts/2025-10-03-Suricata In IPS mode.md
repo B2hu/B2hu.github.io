@@ -1,5 +1,5 @@
 ---
-title: Cortex MCP Server - The Future of Threat Intelligence
+title: Setting Up Suricata In IPS Mode
 date: 2025-10-03 08:00:00 
 last_modified_at: 2025-10-03 01:00:00
 categories: [Suricata]
