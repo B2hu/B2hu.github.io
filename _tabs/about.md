@@ -12,4 +12,7 @@ This blog is dedicated to sharing insights into various cybersecurity attacks an
 If you have a specific attack technique in mind, feel free to send me an email,I’d be happy to write a blog about it.
 
 ## Certification
-* CompTIA Security+
+- CompTIA Security+
+- AZ-500 Azure Security Engineer (In progress)
+- SkillFront ISO 27001 
+- TryHackME - Jr Penetration Tester
