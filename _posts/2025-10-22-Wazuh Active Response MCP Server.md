@@ -55,11 +55,11 @@ Head to **Settings → Developer**, and add the following configuration to the J
 ```
 restart claude, the tools should now appear : 
 
-![claude_tools](../media/post15/claude_tools.png)
+![claude_tools](/media/post15/claude_tools.png)
 
 Then, ask the LLM to list the available tools to verify input schema recognition:
 
-![claude_test](../media/post15/claude_test.png)
+![claude_test](/media/post15/claude_test.png)
 
 Now, let’s test a few of them.
 
@@ -69,7 +69,7 @@ We’ll start by fetching a few recently reported IPs from **AbuseIPDB** and blo
 
 - **On All Agents :**
 
-![ip_block_all](../media/post15/ip_block_all.png)
+![ip_block_all](/media/post15/ip_block_all.png)
 
 As shown, the command executed successfully on agents **006 and 009**, but failed on **004 and 005** because they were inactive.
 
@@ -91,7 +91,7 @@ The Wazuh **execd daemon** (responsible for executing scripts) created two drop 
 
 Now, let’s block another malicious IP on **agent 006** only.
 
-![ip_block_selc](../media/post15/ip_block_selec.png)
+![ip_block_selc](/media/post15/ip_block_selec.png)
 
 Here, the LLM passed the IP address as **srcip** and the **agent ID** as an array to the MCP server, parameters that are then used to invoke the AR API.
 
@@ -129,7 +129,7 @@ If the user exists on all agents, you can disable the account globally — but f
 
 Now, we instruct the LLM to disable user **test**
 
-![disable_acc](../media/post15/disable_acc.png)
+![disable_acc](/media/post15/disable_acc.png)
 
 Just like the block-IP tool, the LLM passed the **dstuser** parameter.
 Verifying the user’s status again shows:
