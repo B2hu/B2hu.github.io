@@ -17,8 +17,10 @@ In my first blog [post](https://b2hu.me/posts/KELK-Project/), I explored how I i
 
 As the project grew, I began to notice a key limitation of Docker Compose — it doesn’t scale efficiently for distributed or **production-grade** workloads. Managing replicas, ensuring high availability, handling node failures, and dynamically scheduling containers all become challenging as the environment expands.
 
-This led me to take the next logical step: migrating the entire architecture to **Kubernetes (K8s)**, a powerful container orchestration platform that automates deployment, scaling, and management of containerized applications. Our goal is to deploy a robust log ingestion pipeline inside Kubernetes and integrate various log sources — whether they are network logs, application logs, or logs from monolithic or microservice applications.
-![objectig](/media/post13/k8s_kelk.png)
+This led me to take the next logical step: migrating the entire architecture to **Kubernetes (K8s)**, a powerful container orchestration platform that automates deployment, scaling, and management of containerized applications. Our goal is to deploy a robust log ingestion pipeline inside Kubernetes and integrate various log sources — whether they are network logs, application logs, or logs from monolithic or microservice applictions.
+
+![objectif](/media/post13/k8s_kelk.png)
+
 In this **Part 1 post**, I’ll walk you through:
 
 - Deploying the different KELK resources on Minikube
