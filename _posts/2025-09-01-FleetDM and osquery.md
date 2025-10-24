@@ -176,7 +176,7 @@ fleetctl package --type=deb --enable-scripts --fleet-desktop \
 ```
 Install the package on the agent, and you’re ready!
 
-![alt text](../media/post8/image.png)
+![alt text](/./media/post8/image.png)
 
 ## Query test
 
@@ -189,7 +189,7 @@ SELECT * FROM etc_hosts;
 ```
 Running this as a live query in FleetDM will return all host file entries from your endpoints.
 
-![alt text](../media/post8/query_res.png)
+![alt text](/./media/post8/query_res.png)
 
 ---
 
