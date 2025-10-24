@@ -41,7 +41,7 @@ This is where Entra ID SSO comes in. Instead of recreating accounts, your teams 
 
 N.B : if your server url is not a domain name (like my case make sure you add it in hosts file)
 
-![prof](../media/post9/entr_app.png)
+![prof](/./media/post9/entr_app.png)
 
 ---
 ### Fleet Server Configuration
