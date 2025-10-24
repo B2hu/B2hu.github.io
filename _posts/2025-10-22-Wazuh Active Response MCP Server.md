@@ -1,5 +1,5 @@
 ---
-title: Wazuh Active Response MCP Server - The Future of Threat Intelligence
+title: Wazuh Active Response MCP Server - AI Integration in Incident Response
 date: 2025-10-22 15:00:00 
 last_modified_at: 2025-09-23 08:00:00
 categories: [MCP, Wazuh]
